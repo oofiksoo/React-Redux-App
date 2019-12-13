@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import AccountInfo from "./components/AccountInfo";
 
 function App() {
+  const apikey = "zpfFvWBRqut0E0FJoQwGwxzReN4SYgMJ";
+  //const facets ="100";
+  //const query = "";
+  const url = `https://api.shodan.io/api-info?key=${apikey}`;
+  //const url = `https://api.shodan.io/shodan/host/search?key=${apikey}&query=${query}&facets=${facets}`;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"> </header> <AccountInfo />
     </div>
   );
 }
